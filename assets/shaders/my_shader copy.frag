@@ -45,3 +45,7 @@ void main() {
 
 //   - if a uniform is not used it seems to mess up the
 /      order of variables being passed in
+
+// Alpha Channel
+
+//   - you must explictly manipulate the alpha channel
