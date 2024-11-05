@@ -1,16 +1,22 @@
 import 'dart:ui';
 
 import 'package:custom_shaders/smiley_face_with_shader.dart';
-import 'package:custom_shaders/widgets/custonGradientShader/custom_shader.dart';
+import 'package:custom_shaders/widgets/cusomShader/custom_shader.dart';
+import 'package:custom_shaders/widgets/customGradientShader/custom_shader.dart';
 import 'package:flutter/material.dart';
 
 late FragmentProgram fragmentProgram;
 
+late FragmentProgram customFragmentProgram;
+
 Future<void> main() async {
   // create a FragmentProgram from defined GLSL shader
-  fragmentProgram = await FragmentProgram.fromAsset('assets/shaders/my_shader.frag');
+  fragmentProgram = await FragmentProgram.fromAsset('assets/shaders/gradient_shader.frag');
+  customFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/custom_shader.frag');
 
-  runApp(const MainApp());
+  // runApp(const MainApp());
+
+  runApp(const SecondaryApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -46,6 +52,18 @@ class MainApp extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class SecondaryApp extends StatelessWidget {
+  const SecondaryApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomShader(
+      Colors.purple,
+      shader: customFragmentProgram.fragmentShader(),
     );
   }
 }
