@@ -57,7 +57,14 @@ flutter:
   uses-material-design: true
 
   shaders:
-    - assets/shaders/my_shader.frag
+    - assets/shaders/gradient_shader.frag
+    - assets/shaders/custom_shader.frag
+    - assets/shaders/custom_shader_moving_circles.frag
+    - assets/shaders/custom_shader_vibrant_moving_circles.frag
+    - assets/shaders/custom_shader_multicolor_vibrant_moving_circles.frag
+    - assets/shaders/custom_shader_multicolor_vibrant_moving_circles_with_fractal_part1.frag
+    - assets/shaders/custom_shader_multicolor_vibrant_moving_circles_with_fractal_part2.frag
+    - assets/shaders/custom_shader_multicolor_vibrant_moving_circles_with_fractal_part3.frag
 
   # To add assets to your application, add an assets section, like this:
   # assets:

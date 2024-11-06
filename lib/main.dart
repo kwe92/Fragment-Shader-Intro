@@ -12,7 +12,11 @@ late FragmentProgram customFragmentProgram;
 Future<void> main() async {
   // create a FragmentProgram from defined GLSL shader
   fragmentProgram = await FragmentProgram.fromAsset('assets/shaders/gradient_shader.frag');
-  customFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/custom_shader.frag');
+
+  customFragmentProgram =
+      await FragmentProgram.fromAsset('assets/shaders/custom_shader_multicolor_vibrant_moving_circles_with_fractal_part3.frag');
+
+  // customFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/custom_shader_moving_circles.frag');
 
   // runApp(const MainApp());
 

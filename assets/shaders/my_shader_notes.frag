@@ -49,3 +49,24 @@ void main() {
 // Alpha Channel
 
 //   - you must explictly manipulate the alpha channel
+
+// What is Swizzling in GLSL? | see: https://www.youtube.com/watch?v=f4s1h2YETNY
+
+//   - vectors have implicit getters that allow you to extract values into new vectors
+//     they are like variables maped to indices that you can reorder
+
+//   - vec2 myVector = (4.0, 2.0); 
+
+//   - myVector will have getters:
+
+//       - myVector.x representing (4.0)
+
+//       -  myVector.y representing (2.0)
+
+//       - myVector.xy representing (4.0, 2.0) i.e. the original vector
+
+//       - myVector.yx representing (2.0, 4.0)
+
+//  - also acts as a shortcut for vector math
+
+//  - myVector / 2.0 == (4.0 / 2.0, 2.0 / 2.0)

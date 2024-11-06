@@ -21,12 +21,14 @@ class TickingBuilderState extends State<TickingBuilder> with SingleTickerProvide
   void initState() {
     super.initState();
 
-    // start animation
+    // start shader animation
     ticker = createTicker(_handleTick)..start();
 
-    // stops the animation after two seconds
-    Future.delayed(const Duration(seconds: 2)).then((_) {
+    // stops the shader animation after two seconds
+    Future.delayed(const Duration(seconds: 10)).whenComplete(() {
+      debugPrint('stopping shader animation...');
       ticker.stop();
+      debugPrint(' shader animation stopped.');
     });
   }
 
