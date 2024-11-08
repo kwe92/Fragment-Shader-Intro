@@ -53,7 +53,8 @@ class CustomGradientShaderPainter extends CustomPainter {
 
   // if properties change and do not match previous widget repaint
   @override
-  bool shouldRepaint(CustomGradientShaderPainter oldDelegate) => startColor != oldDelegate.startColor || endColor != oldDelegate.endColor;
+  bool shouldRepaint(CustomGradientShaderPainter oldDelegate) =>
+      startColor != oldDelegate.startColor || endColor != oldDelegate.endColor || oldDelegate.shader != shader;
 }
 
 

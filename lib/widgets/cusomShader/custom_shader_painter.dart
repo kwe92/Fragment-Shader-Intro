@@ -33,7 +33,8 @@ class CustomShaderPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(CustomShaderPainter oldDelegate) => oldDelegate.color != color;
+  bool shouldRepaint(CustomShaderPainter oldDelegate) =>
+      oldDelegate.color != color || oldDelegate.time != time || oldDelegate.shader != shader;
 }
 
 FragmentShader _setColor(FragmentShader shader, Color color, {required int indexStart}) {
